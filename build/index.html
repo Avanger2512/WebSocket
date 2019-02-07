@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Title</title>
+  <link rel="stylesheet" href="../css/app.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+</head>
+<body>
+  <div class="status">
+    <span id="status"> </span>
+  </div>
+  <section>
+
+    <div class="amount">
+      <h1>Your amount</h1>
+      <div class="amount__value">
+        <span>$</span>
+        <span id="account">50</span>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <button type="button" class="btn btn_hidden" name="button" id="open-popup">Update</button>
+  </section>
+
+  <div class="popup" id="popup" style="display: none;">
+    <div class="popup__container">
+      <button class="popup__close popup-close" type="button" id="">X</button>
+      <div class="popup__line">
+        <h2 class="popup__title">Choose payment systems</h2>
+        <select class="select" name="payments" id="payments">
+          <option value="placeholder" selected disabled>Select system</option>
+        </select>
+      </div>
+      <div class="popup__line js-line-hidden is-hidden">
+        <h2 class="popup__title">Your wallet number</h2>
+        <input type="text" class="popup__number" id="copy" value="JKmrE7kxdBoAQBEniNcz6hYejoTnNaQUmxGRUQiPNe">
+        <button class="btn btn_sm" type="button" id="copy-btn">Copy to clipboard</button>
+      </div>
+      <div class="spinner-wrap" id="spinner">
+        <div class="spinner"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="notification">
+    <div class="notification__text"></div>
+  </div>
+
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>
